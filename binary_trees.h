@@ -2,8 +2,8 @@
 #define BINARY_TREES_H
 
 #include <stdlib.h>
+#include <stdbool.h>
 #include <stddef.h>
-#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -83,6 +83,9 @@ binary_tree_t *bta_helper(binary_tree_t *root, const binary_tree_t *first,
 			  const binary_tree_t *second);
 void btlo_helper(const binary_tree_t *tree, void (*func)(int), size_t level);
 int btic_helper(const binary_tree_t *tree, size_t index, size_t size);
+bst_t *bst_search(const bst_t *tree, int value);
+bst_t *swap(bst_t *a, bst_t *b);
+bst_t *bst_remove(bst_t *root, int value);
 int btib_helper(const binary_tree_t *tree, int low, int hi);
 bst_t *bst_min_val(bst_t *root);
 int btia_helper(const binary_tree_t *tree, int low, int hi);
